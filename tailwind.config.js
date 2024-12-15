@@ -14,8 +14,19 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                    primary: {
+                        600: '#3b82f6', // Set your primary color shade here
+                        700: '#2563eb', // Optional: Add darker shade for hover states
+                    },
+                },
         },
     },
 
-    plugins: [forms],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('flowbite/plugin')({
+            datatables: true,
+        }),
+    ],
 };
